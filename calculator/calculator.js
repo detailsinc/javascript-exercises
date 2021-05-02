@@ -7,23 +7,28 @@ function subtract (a, b) {
 }
 
 function sum (array) {
-	return array.reduce((total, nextValue) => total + nextValue, 0)
+	return array.reduce((total, curV) => {
+		return total += curV
+	}, 0)
 }
 
 function multiply (array) {
-	return array.reduce((total, nextValue) => total * nextValue)
+	return array.reduce((total, curV) => {
+		return total *= curV
+	})
 }
 
 function power(a, b) {
 	return Math.pow(a, b)
 }
 
-function factorial(a) {
-	if (a == 0) return 1;
-	let value = 1;
-	for (let i = a; i > 0; i--) {
-		value *= i
-	} return value
+function factorial(n) {
+	if (n === 0) {return 1}
+	let result = 1;
+	for (let i = n; i > 0; i--) {
+		 result *= i
+	}
+	return result
 }
 
 module.exports = {
